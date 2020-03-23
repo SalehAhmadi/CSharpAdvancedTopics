@@ -12,6 +12,14 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            //Dynamics
+            dynamic dynamic = "test";
+            dynamic = 10;
+            dynamic a = 10;
+            dynamic b = 5;
+            var c = a + b;
+            int d = a;
+            long e = d;
             //Nullables
             DateTime? date = null;
             Console.WriteLine(date.GetValueOrDefault());
