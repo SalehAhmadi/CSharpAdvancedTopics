@@ -2,8 +2,10 @@
 using AdvancedTopics.Delegates.Samples;
 using AdvancedTopics.EventHandlers;
 using AdvancedTopics.EventHandlers.Samples;
+using AdvancedTopics.ExceptionHandling;
 using AdvancedTopics.Generics.Samples;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace TestConsole
@@ -12,12 +14,44 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            //Exception Hnadeling
+            StreamReader streamReader = null;
+            try
+            {
+                streamReader = new StreamReader(@"c:\test.zip");
+                var content = streamReader.ReadToEnd();
+                throw new Exception("!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Occurred!");
+            }
+            finally
+            {
+                if (streamReader != null)
+                    streamReader.Dispose();
+            }
+            ///Or
+            ///            StreamReader streamReader = null;
+            try
+            {
+                //using (var StreamReader = new StreamReader(@"c:\test.zip"))
+                //{
+                //    var content = streamReader.ReadToEnd();
+                //}
+                var youtube = new YouTubeApi();
+                var vids = youtube.GetVideos("user");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             //Dynamics
             dynamic dynamic = "test";
             dynamic = 10;
             dynamic a = 10;
-            dynamic b = 5;
-            var c = a + b;
+            dynamic bbb = 5;
+            var c = a + bbb;
             int d = a;
             long e = d;
             //Nullables
