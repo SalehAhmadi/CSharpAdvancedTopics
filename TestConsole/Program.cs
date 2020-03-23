@@ -10,6 +10,10 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            //Extensions
+            string post = "this is long long long post...";
+            var shortenedPost = post.Shorten(3);
+            Console.WriteLine(shortenedPost);
             //Events
             var video = new Video() { Title = "Video Title 1" };
             var videoEncoder = new VideoEncoder(); /// Publisher

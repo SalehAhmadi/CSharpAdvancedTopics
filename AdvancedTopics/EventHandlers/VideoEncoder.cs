@@ -26,10 +26,7 @@ namespace AdvancedTopics.EventHandlers
 
         protected virtual void OnVideoEncoded(Video video)
         {
-            if (videoEncoded != null)
-            {
-                videoEncoded(this, new VideoEventArgs() { Video = video });
-            }
+            videoEncoded?.Invoke(this, new VideoEventArgs() { Video = video });
         }
     }
 }
