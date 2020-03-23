@@ -1,7 +1,6 @@
 ﻿using AdvancedTopics.EventHandlers.Samples;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AdvancedTopics.ExceptionHandling
 {
