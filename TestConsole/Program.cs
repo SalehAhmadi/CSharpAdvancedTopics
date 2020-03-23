@@ -1,13 +1,23 @@
 ﻿using AdvancedTopics;
 using AdvancedTopics.Delegates.Samples;
+using AdvancedTopics.EventHandlers;
+using AdvancedTopics.EventHandlers.Samples;
 using AdvancedTopics.Generics.Samples;
 using System;
 namespace TestConsole
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
+            //Events
+            var video = new Video() { Title = "Video Title 1" };
+            var videoEncoder = new VideoEncoder(); /// Publisher
+            var mailService = new MailService();// subscriber
+            var messageService = new MessageService();
+            videoEncoder.videoEncoded += mailService.OnVideoEncoded;
+            videoEncoder.videoEncoded += messageService.OnVideoEncoded;
+            videoEncoder.Encode(video);
             // =>
             const int factor = 5;
             Func<int, int> multipler = n => n * factor;
