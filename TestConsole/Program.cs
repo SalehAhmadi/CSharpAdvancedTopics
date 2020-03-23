@@ -4,12 +4,22 @@ using AdvancedTopics.EventHandlers;
 using AdvancedTopics.EventHandlers.Samples;
 using AdvancedTopics.Generics.Samples;
 using System;
+using System.Linq;
+
 namespace TestConsole
 {
     partial class Program
     {
         static void Main(string[] args)
         {
+            ///Linq Extension Methods
+            var books1 = new BookRepository().GetBooks();
+            var cheapBooks1 = books1.Where(x => x.Price < 10).OrderBy(x => x.Title);
+            //Linq Query Operator
+            var cheaperBooks = from b in books1
+                               where b.Price < 10
+                               orderby b.Title
+                               select b.Title;
             //Extensions
             string post = "this is long long long post...";
             var shortenedPost = post.Shorten(3);
