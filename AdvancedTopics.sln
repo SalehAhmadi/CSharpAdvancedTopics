@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedTopics", "AdvancedTopics\AdvancedTopics.csproj", "{7752FD9B-51EF-41C7-B087-64F925EF49B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdvancedTopics", "AdvancedTopics\AdvancedTopics.csproj", "{7752FD9B-51EF-41C7-B087-64F925EF49B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{C8F28A56-6617-4E22-914E-FFEB9F7AB6AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7752FD9B-51EF-41C7-B087-64F925EF49B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7752FD9B-51EF-41C7-B087-64F925EF49B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7752FD9B-51EF-41C7-B087-64F925EF49B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8F28A56-6617-4E22-914E-FFEB9F7AB6AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8F28A56-6617-4E22-914E-FFEB9F7AB6AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8F28A56-6617-4E22-914E-FFEB9F7AB6AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8F28A56-6617-4E22-914E-FFEB9F7AB6AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
