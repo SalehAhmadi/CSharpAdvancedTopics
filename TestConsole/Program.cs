@@ -12,6 +12,13 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            //Nullables
+            DateTime? date = null;
+            Console.WriteLine(date.GetValueOrDefault());
+            Console.WriteLine(date.HasValue);
+            //Console.WriteLine(date.Value);
+            DateTime date2 = date.GetValueOrDefault();
+            DateTime? date3 = date2;
             ///Linq Extension Methods
             var books1 = new BookRepository().GetBooks();
             var cheapBooks1 = books1.Where(x => x.Price < 10).OrderBy(x => x.Title);
