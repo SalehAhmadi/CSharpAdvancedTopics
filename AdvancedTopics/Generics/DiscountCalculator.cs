@@ -1,4 +1,4 @@
-﻿using AdvancedTopics.Samples;
+﻿using AdvancedTopics.Generics.Samples;
 
 namespace AdvancedTopics
 {

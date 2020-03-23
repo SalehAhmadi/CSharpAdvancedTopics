@@ -1,4 +1,4 @@
-﻿namespace AdvancedTopics.Samples
+﻿namespace AdvancedTopics.Generics.Samples
 {
     public class Book : Product
     {
