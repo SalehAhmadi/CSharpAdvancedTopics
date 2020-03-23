@@ -8,6 +8,17 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
+            // =>
+            const int factor = 5;
+            Func<int, int> multipler = n => n * factor;
+            Console.WriteLine(multipler(5));
+
+            var books = new BookRepository().GetBooks();
+            //var cheapBooks = books.FindAll(IsCheaperThan10Dollars);
+            var cheapBooks = books.FindAll(b => b.Price < 10);
+            foreach (var book in cheapBooks)
+                Console.WriteLine(book.Title);
+            //Delegates
             var photo = new PhotoProcessor();
             var filters = new PhotoFilters();
             //PhotoProcessor.PhotoFilterHandler filterHandler = filters.ApplyBrightness;
@@ -15,7 +26,7 @@ namespace TestConsole
             filterHandler += filters.ApplyContrast;
             filterHandler += RemoveRedEyeFilter;
             photo.Process("test", filterHandler);
-
+            //Generics
             var numbers = new Generic<int>();
             numbers.Add(10);
 
@@ -31,6 +42,11 @@ namespace TestConsole
         static void RemoveRedEyeFilter(Photo photo)
         {
             Console.WriteLine("Remove RedEye");
+        }
+
+        static bool IsCheaperThan10Dollars(Book book)
+        {
+            return book.Price < 10;
         }
     }
 }
